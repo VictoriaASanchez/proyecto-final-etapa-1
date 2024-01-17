@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #EBEBEB;
+  position: relative;
+}
+
+/* GRID */
+.cards-container {
+  display: grid;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 2rem 5% 6rem 5%;
+}
+
+/* NAVBAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+}
+
+nav {
+  margin: 0rem 5% 6rem 5%;
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(32, 32, 32);
+}
+
+li a:hover {
+  color: #3957F3;
+}
+
+li:nth-child(2) {
+  margin: 0 2rem 0 2rem;
+}
+
+.drawer {
+  width: 1.5rem;
+  float: left;
+  cursor: pointer;
+  display: none;
+}
+
+#ckbox {
+  display: none;
+}
+
+header input {
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border-radius: 10rem;
+  border: 1px solid #EBEBEB;
+  margin-right: 0.5rem;
+}
+
+button {
+  background: #3957F3;
+  border-radius: 10rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border: none;
+  color: white;
+cursor: pointer;
+}
+
+/* CARDS */
+
+h2 {
+  margin: 0;
+  margin-right: 2rem;
+}
+
+.title-container {
+  margin: 2rem 5% 6rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-card {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.img-container {
+  text-align: center;
+  border-bottom: 1px solid #E2E8F0;
+  object-fit:cover;
+  height: 400px;
+}
+
+img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+p {
+  color: rgb(59, 59, 59);
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 0 2rem 0;
+}
+
+/* ALTA DE PRODUCTOS */
+label {
+  display: block;
+}
+
+textarea {
+  height: 6rem;
+  resize: none;
+}
+
+.label-required::after {
+  content: "(*)";
+  color: rgb(225, 71, 71);
+  margin-left: 0.5rem;
+}
+
+.form-control[aria-invalid=true] {
+  outline: 2px solid rgb(225, 71, 71);
+}
+
+.input-msg-error {
+  display: none;
+  color: rgb(225, 71, 71);
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 1000px) {
+
+  nav {
+    justify-content: left;
+  }
+
+  .search {
+    flex: 1;
+    text-align: right;
+  }
+
+  .search input::placeholder {
+    text-align: left;
+  }
+
+  .drawer {
+    display: block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  ul {
+    padding: 2rem 5% 6rem 5%;
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    background-color: white;
+    left: -100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background-color: white;
+    border-right: 1px solid #E2E8F0;
+    position: absolute;
+    top: 100%;
+    transition: all 0.3s ease;
+  }
+
+  li {
+    padding-bottom: 1.5rem;
+  }
+
+  li:nth-child(2) {
+    margin: 0;
+  }
+
+  #ckbox:checked ~ .menu-box {
+    left: 0;
+  }
+  
+  #ckbox:checked ~ .drawer i::before {
+    content: '\f00d';
+    width: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .logo-container {
+    display: none;
+  }
+}

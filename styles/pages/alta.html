@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de productos</title>
+    <link rel="stylesheet" href="../vendors/main.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <nav>
+                <div><a href="index.html">Juguetería Cósmica</a></div>
+                <ul>
+                    <li><a href="../pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="../pages/alta.html">Alta de productos</a></li>
+                    <li><a href="../pages/contacto.html">Contactanos</a></li>
+                </ul>
+                <button>Search</button>
+            </nav>
+        </header>
+    </div>
+
+    <h2>Dar de alta a un producto</h1>
+        <form id="uploadForm" onsubmit="onSubmitProduct(event)">
+            <div class="mb-3">
+              <label for="name" class="form-label label-required">Nombre</label>
+              <input type="text" class="form-control input-error" id="name" name="name" required>
+              <p id="nameError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+              <label for="price" class="form-label label-required">Precio</label>
+              <!-- <input type="number" class="form-control" id="price" name="price" required min="0"> -->
+              <input type="number" class="form-control" id="price" name="price" required>
+              <p id="priceError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+                <label for="stock" class="form-label label-required">Stock</label>
+                <input type="number" class="form-control" id="stock" name="stock" required min="0">
+                <p id="stockError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+                <label for="brand" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="brand" name="brand" maxlength="20">
+                <p id="brandError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+                <label for="category" class="form-label label-required">Categoría</label>
+                <input type="text" class="form-control" id="category" name="category" required>
+                <p id="categoryError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+                <label for="shortDescription" class="form-label label-required">Descripción corta</label>
+                <input type="text" class="form-control" id="shortDescription" name="shortDescription" required maxlength="120">
+                <p id="shortDescriptionError" class="input-msg-error"></p>
+            </div>
+            
+            <div class="mb-3">
+                <label for="description" class="form-label">Descripción larga</label>
+                <textarea type="" class="form-control" id="description" name="description" minlength="60" maxlength="400"></textarea>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-checkbox" id="freeShipping" name="freeShipping">
+              <label class="form-check-label" for="freeShipping">Envío sin cargo</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="ageFrom" class="form-label">Edad desde</label>
+                <input type="number" class="form-control" id="ageFrom" name="ageFrom" min="0">
+                <p id="ageFromError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+                <label for="ageTo" class="form-label">Edad hasta</label>
+                <input type="number" class="form-control" id="ageTo" name="ageTo" min="1">
+                <p id="ageToError" class="input-msg-error"></p>
+            </div>
+
+            <div class="mb-3">
+                <label for="photo" class="form-label label-required">Foto</label>
+                <input type="file" class="form-control" id="photo" name="photo" required>
+                <p id="photo" class="input-msg-error"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+
+        <footer>
+            © 2021 Landify UI Kit. All rights reserved.
+        </footer>
+        
+        <script src="/js/alta.js"></script>
+        <script src="/js/validations.js"></script>
+</body>
+</html>
