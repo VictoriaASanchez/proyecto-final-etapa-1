@@ -1,0 +1,126 @@
+.background-grey {
+    background: $color2;
+    padding: 6rem 0 6rem 0;
+  
+    @media screen and (max-width: 650px) {
+      padding-top: 3rem;
+    }
+  }
+  
+  .background-white {
+    background: $color3;
+    padding: 6rem 0 6rem 0;
+  }
+  
+  .grid-about-us {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin: 0 10% 0rem 10%;
+  
+    @media screen and (max-width: 650px) {
+      margin: 0 1.5rem 0rem 1.5rem;
+    }
+  
+    .photo-about-us {
+      grid-column: span 4;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 1.5rem;
+  
+      @media screen and (max-width: 1200px) {
+        grid-column: span 12;
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; 
+      }
+    }
+  
+    .description-about-us {
+      grid-column: span 8;
+      padding-left: 4rem;
+    
+      @media screen and (max-width: 1200px) {
+        padding-left: 0;
+        grid-column: span 12;
+      }
+  
+      h5 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: #3957F3;
+        margin: 2rem 0 0.5rem 0;
+      }
+  
+      .title-about-us {
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+  
+      p {
+        text-align: justify;
+        margin: 0;
+      }
+    }
+  
+    .padding-left {
+      padding-left: 0;
+      padding-right: 4rem;
+  
+      @media screen and (max-width: 1200px) {
+        padding-right: 0;
+      }
+    }
+  
+    .title-cards {
+      text-align: center;
+      margin-bottom: 4rem;
+      grid-column: span 12;
+    }
+  
+    .padding-box {
+      background: $color3;
+      border-radius: 1rem;
+      grid-column: span 3;
+      padding: 2rem;
+      border: 2px solid transparent;
+      &:hover {
+        border: 2px solid $color1;
+        cursor: pointer;
+        background-color: $color2;
+  
+        h4 {
+          color: $color1;
+        }
+      }
+  
+      @media screen and (max-width: 1200px) {
+        grid-column: span 6;
+      }
+  
+      @media screen and (max-width: 650px) {
+        grid-column: span 12;
+      }
+  
+      h4 {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .order-1 {
+      order: 2;
+    }
+  
+    .order-2 {
+      order: 1;
+    }
+  }

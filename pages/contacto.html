@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos</title>
-    <link rel="stylesheet" href="../vendors/main.css">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <link rel="stylesheet" href="../styles/vendors/main.css">
     <script src="https://kit.fontawesome.com/b9420b83e7.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,15 +16,17 @@
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </label>
             <div class="logo-container">
-                <a class="logo" href="./index.html">Juguetería Cósmica</a>
+                <a class="logo" href="./index.html">
+                    <img src="/img/logocolor.png" alt="Logo Juguetería Cósmica">
+                </a>
             </div>
             <ul class="menu-box">
                 <li><a href="../pages/nosotros.html">Nosotros</a></li>
                 <li><a href="../pages/alta.html">Alta de productos</a></li>
                 <li><a href="../pages/contacto.html">Contactanos</a></li>
             </ul>
-            <div class="search">
-                <form action="#">
+            <div class="search-form">
+                <form class="search-form" action="#">
                     <input class="search" type="text" placeholder="Buscar juguetes" name="search">
                     <button type="button" class="search">Buscar</button>
                 </form>
@@ -70,7 +73,7 @@
                 
                 <div class="inputs-container">
                     <label for="comment" class="form-label label-required">Comentarios</label>
-                    <textarea type="text" class="form-control" id="comment" name="comment" maxlength="400" required></textarea>
+                    <textarea class="form-control" id="comment" name="comment" maxlength="400" required></textarea>
                 </div>
 
                 <button type="submit" class="btn-contact">Enviar</button>

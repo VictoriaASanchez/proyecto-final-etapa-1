@@ -103,14 +103,14 @@ const onSubmitProduct = e => {
 
     // Descripción corta *
     if (validateStrings(shortDescriptionInput.value)) {
-        const validStringDesc = validateStringsLength(shortDescriptionInput.value, 5, 20)
+        const validStringDesc = validateStringsLength(shortDescriptionInput.value, 10, 120)
         if (validStringDesc === true) {
             shortDescriptionInput.ariaInvalid = false
             shortDescriptionError.innerText = ''
             shortDescriptionError.style.display = 'none'
         } else {
             shortDescriptionInput.ariaInvalid = true
-            shortDescriptionError.innerText = validStringCategory
+            shortDescriptionError.innerText = validStringDesc
             shortDescriptionError.style.display = 'block'
             validForm = false
         }

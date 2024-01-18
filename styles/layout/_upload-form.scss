@@ -1,0 +1,144 @@
+.upload-form-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin: 0 10%;
+    row-gap: 2rem;
+    padding: 4rem 0 10rem 0;
+  
+    .title-form1 {
+      margin: 0;
+      grid-column: span 12;
+      text-align: center;
+      font-size: 2rem;
+    }
+  
+    .form-label {
+      padding-bottom: 0.75rem;
+    }
+    
+    #uploadForm {
+      background: $color3;
+      box-shadow: $shadow2;
+      padding: 3rem;
+      border-radius: 1rem;
+      grid-column: span 12;
+      width: 100%;
+      box-sizing: border-box;
+      margin: auto;
+      max-width: 800px;
+  
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      @media screen and (max-width: 650px) {
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+      }
+  
+      .flex-container {
+        display: flex;
+        width: 100%;
+  
+        @media screen and (max-width: 650px) {
+          display: block;
+        }
+      }
+  
+      .form-control {
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        border: 1px solid $color6;
+        display: block;
+        width: 100%;
+        height: 2.7rem;
+        padding: 0 1rem 0 1rem;
+        align-items: center;
+      }
+  
+      label {
+        display: block;
+      }
+  
+      .margin-right {
+        margin-right: 1rem;
+  
+        @media screen and (max-width: 650px) {
+          margin-right: 0;
+        }
+      }
+      
+      .margin-left {
+        margin-left: 1rem;
+  
+        @media screen and (max-width: 650px) {
+          margin-left: 0;
+        }
+      }
+  
+      #photo {
+        height: 2.7rem;
+        line-height: 2.7rem;
+      }
+    }
+  }
+  
+  .inputs-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  textarea {
+    resize: none;
+    height: 7rem !important;
+  }
+  
+  .form-check {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  
+  .form-check-label {
+    margin-left: 0.5rem;
+  }
+  
+  .age-container {
+    display: flex;
+  }
+  
+  .label-required::after {
+    content: "(*)";
+    color: $color5;
+    margin-left: 0.5rem;
+  }
+  
+  .form-control[aria-invalid=true] {
+    outline: 2px solid $color5;
+  }
+  
+  .input-msg-error {
+    display: none;
+    color: $color5;
+  }
+  
+  .btn-container {
+    text-align: right;
+    margin-top: 1rem;
+  
+    .btn {
+      font-size: 1.125rem;
+      &:hover {
+        background: #4f6cff;
+      }
+  
+      @media screen and (max-width: 650px) {
+        width: 100%;
+      }
+    }
+  }
+
+.input-msg-error {
+  font-size: 0.875rem;
+  margin: 0;
+}

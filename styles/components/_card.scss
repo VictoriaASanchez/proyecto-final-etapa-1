@@ -1,0 +1,94 @@
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 10% 3rem 10%;
+  
+    @media screen and (max-width: 650px) {
+      margin: 0 1.5rem 3rem 1.5rem;
+      display: block;
+    }
+  
+    h1 {
+      font-size: 2rem;
+  
+      @media screen and (max-width: 650px) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin: 0 10% 0rem 10%;
+    padding-bottom: 10rem;
+  
+    @media screen and (max-width: 650px) {
+        margin: 0 1.5rem 0rem 1.5rem;
+    }
+  
+    .card {
+      background: rgb(255, 255, 255);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: $shadow2;
+      grid-column: span 3;
+  
+      @media screen and (max-width: 1200px) {
+        grid-column: span 4;
+      }
+  
+      @media screen and (max-width: 1000px) {
+        grid-column: span 6;
+      }
+  
+      @media screen and (max-width: 650px) {
+        grid-column: span 12;
+      }
+  
+      .img-container {
+        text-align: center;
+        border-bottom: 1px solid #E2E8F0;
+        height: 300px;
+        overflow: hidden;
+        padding: 1rem;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }      
+      }
+  
+      .details-card {
+        padding: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        p {
+          color: $color4;
+        }
+  
+        .price-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 2.5rem;
+  
+          .price {
+            font-size: 1.5rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
