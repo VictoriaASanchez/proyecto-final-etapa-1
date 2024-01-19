@@ -322,6 +322,16 @@ header input {
     margin-left: 0;
   }
 }
+@media screen and (max-width: 650px) {
+  .upload-form-container #uploadForm .margin-r {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .upload-form-container #uploadForm .margin-l {
+    margin-left: 1rem;
+  }
+}
 .upload-form-container #uploadForm #photo {
   height: 2.7rem;
   line-height: 2.7rem;
@@ -363,6 +373,8 @@ textarea {
 .input-msg-error {
   display: none;
   color: #F36363;
+  font-size: 0.875rem;
+  margin: 0;
 }
 
 .btn-container {
@@ -379,11 +391,6 @@ textarea {
   .btn-container .btn {
     width: 100%;
   }
-}
-
-.input-msg-error {
-  font-size: 0.875rem;
-  margin: 0;
 }
 
 .title-form {
